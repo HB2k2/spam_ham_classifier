@@ -80,30 +80,30 @@ A) The technique used by CountVectorizer is called Bag of Words (BoW).
 
 Q) will using stemming or lemmatization any will effect accurcy ?
 
-A) Yes, using stemming or lemmatization can affect the accuracy of your model, but the impact can vary depending on the specific task, the nature of your text data, and the algorithm used. Here's how they might influence accuracy:
-
-1. Stemming:
-Definition: Stemming is the process of reducing words to their base or root form by removing suffixes (e.g., "running" becomes "run"). Stemming typically results in non-standard words.
-Impact on Accuracy:
-Positive: Stemming can help by reducing the dimensionality of the data, grouping similar words together, which may improve the model’s ability to generalize.
-Negative: Over-aggressive stemming might group words together that have different meanings (e.g., "better" and "bet"), leading to loss of important information and potentially harming accuracy.
-
-2. Lemmatization:
-Definition: Lemmatization is a more sophisticated technique that reduces words to their base or dictionary form (lemma), considering the context and morphological analysis of the word (e.g., "running" becomes "run", "better" becomes "good").
-Impact on Accuracy:
-Positive: Since lemmatization retains the context and proper meaning of words, it often provides a more accurate reduction than stemming. This can lead to better performance in tasks where word meanings are crucial.
-Negative: Lemmatization requires more computational resources and may not always significantly improve accuracy compared to stemming, especially for simpler tasks.
-
-When Stemming or Lemmatization Might Improve Accuracy:
-Synonym Unification: In tasks like text classification, sentiment analysis, or topic modeling, stemming or lemmatization can unify synonyms or related words, making it easier for the model to learn patterns.
-Dimensionality Reduction: By reducing the number of unique words, both techniques can simplify the feature space, potentially improving the model's performance by reducing noise.
-When They Might Hurt Accuracy:
-Loss of Specificity: In tasks where the exact form of the word matters (e.g., named entity recognition, fine-grained sentiment analysis), reducing words to their root forms might lead to a loss of important information, thereby decreasing accuracy.
-Over-stemming: Stemming might reduce words too aggressively, combining words that shouldn't be combined, leading to noise and a drop in accuracy.
-Practical Advice:
-Experimentation: It’s often best to experiment with and without stemming/lemmatization to see how they affect the accuracy on your specific dataset and task.
-Task Consideration: Consider the nature of your task. For example, lemmatization might be more beneficial in complex tasks like machine translation, whereas stemming could suffice in simpler classification tasks.
-In summary, stemming and lemmatization can affect accuracy, either positively or negatively. The best approach is often determined through experimentation, considering the balance between model performance and computational efficiency.
+    Yes, using stemming or lemmatization can affect the accuracy of your model, but the impact can vary depending on the specific task, the nature of your text data, and the algorithm used. Here's how they might influence accuracy:
+    
+    1. Stemming:
+    Definition: Stemming is the process of reducing words to their base or root form by removing suffixes (e.g., "running" becomes "run"). Stemming typically results in non-standard words.
+    Impact on Accuracy:
+    Positive: Stemming can help by reducing the dimensionality of the data, grouping similar words together, which may improve the model’s ability to generalize.
+    Negative: Over-aggressive stemming might group words together that have different meanings (e.g., "better" and "bet"), leading to loss of important information and potentially harming accuracy.
+    
+    2. Lemmatization:
+    Definition: Lemmatization is a more sophisticated technique that reduces words to their base or dictionary form (lemma), considering the context and morphological analysis of the word (e.g., "running" becomes "run", "better" becomes "good").
+    Impact on Accuracy:
+    Positive: Since lemmatization retains the context and proper meaning of words, it often provides a more accurate reduction than stemming. This can lead to better performance in tasks where word meanings are crucial.
+    Negative: Lemmatization requires more computational resources and may not always significantly improve accuracy compared to stemming, especially for simpler tasks.
+    
+    When Stemming or Lemmatization Might Improve Accuracy:
+    Synonym Unification: In tasks like text classification, sentiment analysis, or topic modeling, stemming or lemmatization can unify synonyms or related words, making it easier for the model to learn patterns.
+    Dimensionality Reduction: By reducing the number of unique words, both techniques can simplify the feature space, potentially improving the model's performance by reducing noise.
+    When They Might Hurt Accuracy:
+    Loss of Specificity: In tasks where the exact form of the word matters (e.g., named entity recognition, fine-grained sentiment analysis), reducing words to their root forms might lead to a loss of important information, thereby decreasing accuracy.
+    Over-stemming: Stemming might reduce words too aggressively, combining words that shouldn't be combined, leading to noise and a drop in accuracy.
+    Practical Advice:
+    Experimentation: It’s often best to experiment with and without stemming/lemmatization to see how they affect the accuracy on your specific dataset and task.
+    Task Consideration: Consider the nature of your task. For example, lemmatization might be more beneficial in complex tasks like machine translation, whereas stemming could suffice in simpler classification tasks.
+    In summary, stemming and lemmatization can affect accuracy, either positively or negatively. The best approach is often determined through experimentation, considering the balance between model performance and computational efficiency.
 
 
 
